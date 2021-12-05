@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>json from url</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>JSON DISPLAY</h1>
+        </div>
+        <script>
+            var staticurl='https://jsonplaceholder.typicode.com/users'
+            $.getJSON(staticurl,function(data){
+                console.log("Inside the function")
+                //console.log(data)
+                for (i=0; i<data.length; i=i+1){
+                    console.log(data[i].name)
+                }
+            })
+        </script>
+    </body>
+</html>
